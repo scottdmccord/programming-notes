@@ -1,0 +1,54 @@
+What is Node?
+
+JavaScript runtime that uses the V8 engine.
+
+Node allows JavaScript (a browser language) to run on your machine. Node's
+feature set looks similar to other backend languages.
+
+The V& JavaScript Runtime Engine - takes JavaScript code and compiles it into
+much faster machine code. V& Engine is written in C++ code. If you wanted to extend
+the V8 Engine, you'd be writing C++.
+
+Running Node:
+Run the node command to make a new node process. You can then write node
+commands in the CLI. It's similar to what's running in the browser console.
+
+Differences b/w JS in browser and Node on machine:
+
+BROWSER:
+-You have window (the global obj which stores everything you have
+access to).
+-In Chrome browser, you have access to document that stores a reference to the DOmM
+up above. It shows you what your browser has access to inside the browser's viewport.
+
+NODE:
+-You have global which stores a lot of the same things as a browser window (
+like set timeout and set interval).
+-You have process, which has a lot of information about the specific node process that's
+being executed. You also can control the node processes running.
+  * For example, run process.exit(0) will exit your node terminal and return you
+  to your normal CLI.
+
+
+Why use Node.js?
+
+"Node.js uses an event-driven, non-blocking I/O model that makes it lightweight
+and efficient".
+
+I/O - Input / Output - When you're reading or writing to/from a database. This is
+the communication from your node app to the internet of things. I/O takes time.
+
+non-blocking - For example, when one user is requesting data from google, other users
+can be requesting database files / read & write access, they won't block that request.
+
+Blocking vs. Non-Blocking software development:
+
+Blocking - while you're fetching from the database, you can't do anything else.
+(See example). Code happens in order. A database server that wants to be able to
+respond to multiple requests would need to be multiple threaded. This however
+doesn't scale well. Since JS is a single threaded language, this wouldn't work
+without callbacks.
+
+Non-Blocking - Uses the EVENT LOOP inside of JS. You can start a request and move
+on to the next request before the first request finishes. Non-blocking we start events
+attaching callbacks which get fired later.
